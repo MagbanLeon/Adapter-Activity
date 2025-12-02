@@ -13,7 +13,7 @@ public class GuitarController implements IGuitar{
         }
     }
     public void PressPick(){
-
+        System.out.println("PICK");
     }
     public void PressTremelo(){
 

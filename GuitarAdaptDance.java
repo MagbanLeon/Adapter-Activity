@@ -17,9 +17,10 @@ public class GuitarAdaptDance implements IGuitar{
         }else if(button == colors.ORANGE){
             dc.Step(IDance.direction.MIDDLE);
         }
+        PressPick();
     }
     public void PressPick(){
-
+        System.out.println("PICK");
     }
     public void PressTremelo(){
 
