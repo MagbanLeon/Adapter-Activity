@@ -6,10 +6,13 @@ public class Main{
         dc.Step(IDance.direction.LEFT);
         gc.PressFretButton(IGuitar.colors.GREEN);
 
-        GuitarAdaptDance gad = new GuitarAdaptDance(dc);
-        gad.PressFretButton(IGuitar.colors.GREEN);
+        IDance gad = new GuitarAdaptDance(gc);
+        gad.Step(IDance.direction.LEFT);
 
-        GuitarAdaptDance gad2 = new GuitarAdaptDance(gc);
-        gad2.Step(IDance.direction.LEFT);
+        IGuitar gad2 = new GuitarAdaptDance(dc);
+        gad2.PressFretButton(IGuitar.colors.GREEN);
     }
 }
+
+// IDance dc = new GuitarDanceAdapt(gc);
+// (Interact) => (Do)

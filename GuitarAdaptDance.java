@@ -21,7 +21,6 @@ public class GuitarAdaptDance implements IGuitar, IDance{
         }else if(button == colors.ORANGE){
             dc.Step(IDance.direction.MIDDLE);
         }
-        PressPick();
     }
     public void Step(direction dir){
         if(dir == direction.FORWARD){
@@ -35,6 +34,7 @@ public class GuitarAdaptDance implements IGuitar, IDance{
         }else if(dir == direction.MIDDLE){
             gc.PressFretButton(IGuitar.colors.ORANGE);
         }
+        PressPick();
     }
     public void PressPick(){
         System.out.println("PICK");
