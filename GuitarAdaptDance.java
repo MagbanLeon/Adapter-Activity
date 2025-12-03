@@ -1,8 +1,12 @@
-public class GuitarAdaptDance implements IGuitar{
+public class GuitarAdaptDance implements IGuitar, IDance{
     private DanceController dc;
+    private GuitarController gc;
 
     public GuitarAdaptDance(DanceController dc){
         this.dc = dc;
+    }
+    public GuitarAdaptDance(GuitarController gc){
+        this.gc = gc;
     }
 
     public void PressFretButton(colors button){
@@ -18,6 +22,19 @@ public class GuitarAdaptDance implements IGuitar{
             dc.Step(IDance.direction.MIDDLE);
         }
         PressPick();
+    }
+    public void Step(direction dir){
+        if(dir == direction.FORWARD){
+            gc.PressFretButton(IGuitar.colors.GREEN);
+        }else if(dir == direction.LEFT){
+            gc.PressFretButton(IGuitar.colors.RED);
+        }else if(dir == direction.RIGHT){
+            gc.PressFretButton(IGuitar.colors.YELLOW);
+        }else if(dir == direction.BACK){
+            gc.PressFretButton(IGuitar.colors.BLUE);
+        }else if(dir == direction.MIDDLE){
+            gc.PressFretButton(IGuitar.colors.ORANGE);
+        }
     }
     public void PressPick(){
         System.out.println("PICK");

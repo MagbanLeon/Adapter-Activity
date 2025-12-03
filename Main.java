@@ -9,5 +9,9 @@ public class Main{
         GuitarAdaptDance gad = new GuitarAdaptDance(dc);
 
         gad.PressFretButton(IGuitar.colors.GREEN);
+
+        GuitarAdaptDance gad2 = new GuitarAdaptDance(gc);
+
+        gad2.Step(IDance.direction.LEFT);
     }
 }
